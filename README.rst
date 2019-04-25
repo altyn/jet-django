@@ -98,6 +98,8 @@ Installation
 
 **3. Add URL-pattern to the urlpatterns of your Django project urls.py file:**
 
+  **3.1 Django version < 2**
+
 .. code-block:: python
 
   from jet_django.urls import jet_urls
@@ -105,6 +107,18 @@ Installation
   urlpatterns = [
     ...
     url(r'^jet_api/', include(jet_urls)),
+    ...
+  ]
+
+  **3.2 Django version >= 2**
+
+.. code-block:: python
+
+  from jet_django.urls import jet_urls
+  
+  urlpatterns = [
+    ...
+    path('^jet_api/', include(jet_urls)),
     ...
   ]
 
